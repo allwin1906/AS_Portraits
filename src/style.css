@@ -67,28 +67,29 @@ a {
 }
 
 /* Dummy Media Classes */
-.dummy-video {
-  background: linear-gradient(135deg, #111, #222);
+.dummy-video, .dummy-image {
   position: relative;
   overflow: hidden;
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--color-charcoal);
 }
-.dummy-image {
-  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
-  position: relative;
-  overflow: hidden;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.dummy-video::after, .dummy-image::after {
-  content: 'MEDIA PLACEHOLDER';
+.dummy-video video, .dummy-image img, .reel-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.2);
-  font-family: var(--font-sans);
+  top: 0;
+  left: 0;
+}
+.media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Floating CTAs */
@@ -166,12 +167,15 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2.5rem 5rem;
+    padding: 1.5rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    mix-blend-mode: difference;
+    background: rgba(10, 10, 10, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--color-beige);
   }
   .logo {
@@ -219,10 +223,11 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
     filter: brightness(0.5);
   }
   .hero-content {
+    position: relative;
     z-index: 1;
     max-width: 800px;
   }
@@ -328,7 +333,61 @@ a {
     color: #555;
   }
 
-  /* Featured Works Horizontal */
+  /* Cinematic Reels */
+  .cinematic-reels {
+    background-color: var(--color-black);
+    padding: 15rem 5vw;
+  }
+  .reels-header {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  .reels-header h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  .reels-header p {
+    font-size: 1.2rem;
+    opacity: 0.6;
+  }
+  .reels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .reel-card {
+    position: relative;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    background: var(--color-charcoal);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .reel-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+  .reel-card:hover video {
+    transform: scale(1.05);
+  }
+  .reel-card .reel-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 2;
+  }
+  .reel-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+  }
+  .reel-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
   .featured-works-wrapper {
     background-color: var(--color-charcoal);
     position: relative;
@@ -484,9 +543,7 @@ a {
   }
   
   .floating-ctas {
-    bottom: 120px; /* Above the mobile nav */
-    right: 1.5rem;
-    transform: scale(0.9);
+    display: none; /* Hidden on mobile to prevent blocking content */
   }
 
   .mobile-swipe-container {

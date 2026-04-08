@@ -6,18 +6,30 @@ import Lenis from 'lenis'
 gsap.registerPlugin(ScrollTrigger)
 
 // --- Dummy Data ---
+// --- Dummy Data ---
 const stories = [
-  { title: 'Akhil & Meera', desc: 'Wedding Story — A beautiful union celebrating traditions and love.', type: 'image' },
-  { title: 'Karthik & Priya', desc: 'Pre-wedding Moments — Candid smiles in golden hour light.', type: 'video' },
-  { title: 'Arjun & Neha', desc: 'Sangeet Night — Unscripted joy, dance, and family celebrations.', type: 'image' },
+  { title: 'Akhil & Meera', desc: 'Wedding Story — A beautiful union celebrating traditions and love.', type: 'image', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg' },
+  { title: 'Sacred Vows', desc: 'Anandh & Sainuja — A timeless wedding story.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649276/ANANDH_SAINUJA_Sacred_vows_timeless_love._WeddingPhotography_WeddingPhotographer_Weddin_rdy4fe.mp4' },
+  { title: 'Arjun & Neha', desc: 'Sangeet Night — Unscripted joy, dance, and family celebrations.', type: 'image', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644541/ASP02519_tgq8zn.jpg' },
+]
+
+const cinematicReels = [
+  { title: 'Floral Grace', desc: 'Floral portraits in motion.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649280/Aadiney_Irupen_pavalamalli_VC_asportraits___Makeup_h_bridal_studio_trichyEdit_mast_lgghee.mp4' },
+  { title: 'Vibrant Moves', desc: 'A celebration of dance and joy.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649272/After_a_Long_Time_Dance_ReelVideography_asportraits___Makeup_h_bridal_studio_trichy_Ed_kwjeew.mp4' },
+  { title: 'Sweet Moments', desc: 'Pratiksha\'s delightful cake smash.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649268/Cutie_pie_on_a_sugar_high_Pratiksha_s_cake_smash_moments_For_Bookings-Contact-_91-95973685_x81blc.mp4' },
+  { title: 'Bridal Elegance', desc: 'A radiant journey to forever.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649262/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_wuw3sm.mp4' },
+  { title: 'Sacred Vows', desc: 'Timeless love stories.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649276/ANANDH_SAINUJA_Sacred_vows_timeless_love._WeddingPhotography_WeddingPhotographer_Weddin_rdy4fe.mp4' },
+  { title: 'Beautiful Blessing', desc: 'Grateful for this beautiful blessing.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659696/Feeling_so_grateful_for_this_beautiful_blessing._For_Bookings_-Contact_-_91-9597368543_-_8_fz3qlm.mp4' },
+  { title: 'Beach Love Story', desc: 'Written by the waves — Gokul & Sneka.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659544/A_love_story_written_by_the_waves._Gokul_Sneka_CouplePhotography_BeachCouple_LoveStory_prew_gkkfjb.mp4' },
+  { title: 'Royal Radiance', desc: 'The queen of the day, radiant and graceful.', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659541/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_xejbbp.mp4' }
 ]
 
 const captureServices = [
-  { title: 'Wedding', desc: 'Authentic captures of your most important day, from rituals to reception.', icon: '✦' },
-  { title: 'Newborns & Kids', desc: 'Pure and innocent moments of your little ones.', icon: '🍼' },
-  { title: 'Maternity', desc: 'Beautifully capturing the journey to motherhood.', icon: '🌸' },
-  { title: 'Lifestyle Photography', desc: 'Candid and aesthetic storytelling of your daily life.', icon: '✨' },
-  { title: 'Model Shoots', desc: 'High-end editorial and cinematic portfolios.', icon: '📸' }
+  { title: 'Wedding', desc: 'Authentic captures of your most important day, from rituals to reception.', icon: '✦', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647333/ASP09961_sq20uf.jpg' },
+  { title: 'Newborns & Kids', desc: 'Pure and innocent moments of your little ones.', icon: '🍼', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg' },
+  { title: 'Maternity', desc: 'Beautifully capturing the journey to motherhood.', icon: '🌸', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644562/ASP09682_viqqdq.jpg' },
+  { title: 'Lifestyle Photography', desc: 'Candid and aesthetic storytelling of your daily life.', icon: '✨', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644542/ASP02540_zx9nqw.jpg' },
+  { title: 'Model Shoots', desc: 'High-end editorial and cinematic portfolios.', icon: '📸', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647525/008A2958_lxuksg.jpg' }
 ]
 
 const testimonials = [
@@ -26,11 +38,28 @@ const testimonials = [
 ]
 
 const featuredWeddings = [
-  { title: 'Siddharth & Ananya / Chennai', bg: '#2a201c' },
-  { title: 'Vikram & Swathi / Coimbatore', bg: '#1c1f2a' },
-  { title: 'Arun & Divya / Madurai', bg: '#2a281c' },
-  { title: 'Surya & Kavya / Kerala', bg: '#1c282a' },
+  { title: 'Siddharth & Ananya / Chennai', bg: '#2a201c', type: 'image', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647500/AKZ04343_kpqi0e.jpg' },
+  { title: 'Vikram & Swathi / Coimbatore', bg: '#1c1f2a', type: 'image', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg' },
+  { title: 'The Queen / Special Edition', bg: '#2a281c', type: 'video', img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649262/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_wuw3sm.mp4' },
+  { title: 'Surya & Kavya / Kerala', bg: '#1c282a', type: 'image', img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647617/HSP02747_anwumk.jpg' },
 ]
+
+// --- Helper: Render Media ---
+function renderMedia(item, className = "") {
+  if (item.type === 'video') {
+    return `
+      <div class="${className} dummy-video">
+        <video src="${item.img}" autoplay muted loop playsinline></video>
+        <div class="media-overlay"></div>
+      </div>
+    `;
+  }
+  return `
+    <div class="${className} dummy-image" style="background-image: url('${item.img}'); background-size: cover; background-position: center;">
+      <div class="media-overlay"></div>
+    </div>
+  `;
+}
 
 // --- Populate DOM ---
 const isDesktop = window.innerWidth > 768;
@@ -43,11 +72,28 @@ function initDesktop() {
       storyContainer.innerHTML += `
         <div class="story-card">
           <div class="media-wrapper">
-            <div class="story-media dummy-${s.type}"></div>
+            ${renderMedia(s, "story-media")}
           </div>
           <div class="story-text">
             <h3>${s.title}</h3>
             <p>${s.desc}</p>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Cinematic Reels
+  const reelsGrid = document.querySelector('.reels-grid');
+  if (reelsGrid) {
+    cinematicReels.forEach((r) => {
+      reelsGrid.innerHTML += `
+        <div class="reel-card">
+          <video src="${r.img}" autoplay muted loop playsinline></video>
+          <div class="media-overlay"></div>
+          <div class="reel-info">
+            <h3>${r.title}</h3>
+            <p>${r.desc}</p>
           </div>
         </div>
       `;
@@ -87,7 +133,7 @@ function initDesktop() {
     featuredWeddings.forEach((f) => {
       featuredTrack.innerHTML += `
         <div class="featured-item">
-          <div class="dummy-image" style="background: linear-gradient(to bottom right, ${f.bg}, #111); width:100%; height:100%;"></div>
+          ${renderMedia(f, "dummy-image")}
           <div class="featured-caption">${f.title}</div>
         </div>
       `;
@@ -101,7 +147,7 @@ function initMobile() {
     // Hero Slide
     mobileContainer.innerHTML += `
       <div class="reel-slide info-slide" id="m-home">
-        <div class="reel-media dummy-video"></div>
+        <div class="reel-media" style="background-image: url('https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644518/ASP02532_twiccf.jpg'); background-size: cover; background-position: center;"></div>
         <div class="reel-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2))"></div>
         <div class="reel-content" style="text-align:center;">
           <div class="trust-badge" style="margin-bottom: 2rem;">
@@ -113,53 +159,49 @@ function initMobile() {
       </div>
     `;
 
-    // Inject Stories
-    stories.forEach((r, i) => {
+    // Alternate Logic for Mobile Sections
+    const mobileItems = [
+      ...stories.map(s => ({ ...s, slideId: s === stories[0] ? 'id="m-stories"' : '' })),
+      ...cinematicReels.map(r => ({ ...r, slideId: '' })),
+      ...captureServices.map(c => ({ ...c, type: 'image', slideId: '' })),
+      ...featuredWeddings.map(f => ({ ...f, slideId: '' }))
+    ];
+
+    // Mix them up for a photo-video rhythm
+    const mixedReels = [];
+    const videoPool = mobileItems.filter(i => i.type === 'video');
+    const imagePool = mobileItems.filter(i => i.type === 'image');
+    
+    // We want P V P V P V...
+    const maxLength = Math.max(videoPool.length, imagePool.length) * 2;
+    for (let i = 0; i < maxLength; i++) {
+        const pool = i % 2 === 0 ? imagePool : videoPool;
+        const item = pool.shift();
+        if (item) mixedReels.push(item);
+    }
+    // Add remaining
+    mixedReels.push(...imagePool, ...videoPool);
+
+    mixedReels.forEach((r) => {
       const isVideo = r.type === 'video';
-      const mediaClass = isVideo ? 'dummy-video' : 'dummy-image';
       const playBtn = isVideo ? '<div class="play-btn"></div>' : '';
-      const slideId = i === 0 ? 'id="m-stories"' : '';
       
       mobileContainer.innerHTML += `
-        <div class="reel-slide" ${slideId}>
-          <div class="reel-media ${mediaClass}" style="${r.bg ? `background: ${r.bg}` : ''}"></div>
+        <div class="reel-slide" ${r.slideId || ''}>
+          <div class="reel-media">
+            ${isVideo 
+              ? `<video src="${r.img}" autoplay muted loop playsinline></video>` 
+              : `<div class="dummy-image" style="background-image: url('${r.img}'); background-size: cover; background-position: center; width:100%; height:100%;"></div>`
+            }
+          </div>
           <div class="reel-overlay"></div>
           ${playBtn}
           <div class="reel-content">
             <h2 class="reel-title">${r.title}</h2>
-            <p class="reel-desc">${r.desc}</p>
+            <p class="reel-desc">${r.desc || 'Cinematic Story'}</p>
           </div>
         </div>
       `;
-    });
-
-    // Inject Capture Services as info slides
-    captureServices.forEach((c) => {
-      mobileContainer.innerHTML += `
-        <div class="reel-slide info-slide">
-          <div class="reel-media"></div>
-          <div class="reel-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4))"></div>
-          <div class="reel-content" style="text-align:center;">
-            <div style="font-size:4rem; color:var(--color-gold); margin-bottom:1rem;">${c.icon}</div>
-            <h2 class="reel-title">${c.title}</h2>
-            <p class="reel-desc" style="opacity:1">${c.desc}</p>
-          </div>
-        </div>
-      `;
-    });
-
-    // Inject Featured
-    featuredWeddings.forEach((f) => {
-        mobileContainer.innerHTML += `
-          <div class="reel-slide">
-            <div class="reel-media dummy-image" style="background: ${f.bg};"></div>
-            <div class="reel-overlay"></div>
-            <div class="reel-content">
-              <h2 class="reel-title">${f.title}</h2>
-              <p class="reel-desc">Signature Frame</p>
-            </div>
-          </div>
-        `;
     });
 
     // Inject Testimonials
@@ -178,7 +220,7 @@ function initMobile() {
     // About Slide
     mobileContainer.innerHTML += `
       <div class="reel-slide info-slide">
-        <div class="reel-media dummy-image"></div>
+        <div class="reel-media dummy-image" style="background-image: url('https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg'); background-size: cover; background-position: center;"></div>
         <div class="reel-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5))"></div>
         <div class="reel-content" style="text-align:center;">
           <h2 class="reel-title" style="font-size:3rem; margin-bottom:1rem; color:var(--color-gold);">Our Vision</h2>
