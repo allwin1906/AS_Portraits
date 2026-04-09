@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lifestyle Photography | AS Portraits</title>
+  <meta name="description" content="Candid and aesthetic storytelling of your everyday beauty. Lifestyle photography by AS Portraits." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --gold: #c9a96e; --gold-2: #e0c48a;
+      --black: #080808; --dark: #0f0f0f; --charcoal: #141414;
+      --beige: #f5f0e8;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+    }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--beige); font-family: var(--sans); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    /* NAV */
+    .album-nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 500;
+      padding: 1.2rem clamp(1.5rem, 5vw, 4rem);
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.5s, border-color 0.5s;
+      border-bottom: 1px solid transparent;
+    }
+    .album-nav.scrolled { background: rgba(8,8,8,0.9); backdrop-filter: blur(20px); border-bottom-color: rgba(255,255,255,0.05); }
+    .back-link { display: flex; align-items: center; gap: 0.6rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.6); transition: color 0.3s; }
+    .nav-brand { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.25em; color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      position: relative; height: 80svh; min-height: 500px;
+      overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .hero-img {
+      position: absolute; inset: 0;
+      background-image: url('https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644542/ASP02540_zx9nqw.jpg');
+      background-size: cover; background-position: center;
+      filter: brightness(0.5);
+      transform: scale(1.06); transition: transform 8s ease;
+    }
+    .hero-img.loaded { transform: scale(1); }
+    .hero-grad { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(8,8,8,0.2) 0%, rgba(8,8,8,0.8) 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 0 2rem; }
+    .hero-tag { font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+    .hero-title { font-family: var(--serif); font-size: clamp(3.5rem, 12vw, 9rem); font-style: italic; line-height: 0.9; color: #fff; margin-bottom: 1.5rem; }
+    .hero-sub { font-size: 1rem; color: rgba(245,240,232,0.5); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    /* GRID */
+    .lifestyle-grid { padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem); max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .photo-wrap { position: relative; overflow: hidden; border-radius: 2px; background: var(--charcoal); cursor: zoom-in; opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
+    .photo-wrap.visible { opacity: 1; transform: translateY(0); }
+    .photo-wrap img { transition: 0.7s ease; filter: brightness(0.9); }
+    .photo-wrap:hover img { transform: scale(1.04); filter: brightness(1); }
+
+    .span-4 { grid-column: span 4; aspect-ratio: 3/4; }
+    .span-8 { grid-column: span 8; aspect-ratio: 16/9; }
+    .span-6 { grid-column: span 6; aspect-ratio: 4/3; }
+    .span-12 { grid-column: span 12; aspect-ratio: 21/9; }
+
+    /* CTA */
+    .cta-lifestyle { padding: clamp(5rem, 10vw, 10rem) 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+    .cta-lifestyle h2 { font-family: var(--serif); font-size: clamp(2.5rem, 7vw, 5rem); font-style: italic; color: #fff; margin-bottom: 2rem; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.8rem; border: 1px solid var(--gold); color: var(--gold); padding: 1.2rem 3rem; border-radius: 40px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: 0.3s; }
+    .btn-outline:hover { background: var(--gold); color: var(--black); transform: scale(1.05); }
+
+    footer { text-align: center; padding: 4rem; font-size: 0.75rem; color: rgba(245,240,232,0.25); border-top: 1px solid rgba(255,255,255,0.03); }
+
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 900; background: rgba(5,5,5,0.98); backdrop-filter: blur(10px); align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lb-img { max-width: 90vw; max-height: 85vh; border-radius: 2px; }
+
+    @media (max-width: 768px) {
+      .lifestyle-grid { grid-template-columns: repeat(1, 1fr); }
+      .span-4, .span-8, .span-6, .span-12 { grid-column: span 1; aspect-ratio: 4/5; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="album-nav" id="album-nav">
+    <a href="/AS_Portraits/" class="back-link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Home
+    </a>
+    <span class="nav-brand">AS PORTRAITS</span>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-img" id="hero-img"></div>
+    <div class="hero-grad"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Lifestyle Storytelling</div>
+      <h1 class="hero-title">Timeless <em>Everyday</em></h1>
+      <p class="hero-sub">The beauty in the simple, the candid, and the real.</p>
+    </div>
+  </section>
+
+  <div class="lifestyle-grid">
+    <div class="photo-wrap span-8" data-index="0">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644542/ASP02540_zx9nqw.jpg" alt="Lifestyle candid" loading="lazy" />
+    </div>
+    <div class="photo-wrap span-4" data-index="1">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647500/AKZ04343_kpqi0e.jpg" alt="Morning light" loading="lazy" />
+    </div>
+    <div class="photo-wrap span-4" data-index="2">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg" alt="Detail" loading="lazy" />
+    </div>
+    <div class="photo-wrap span-8" data-index="3">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644518/ASP02532_twiccf.jpg" alt="Mood" loading="lazy" />
+    </div>
+    <div class="photo-wrap span-6" data-index="4">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg" alt="Candid" loading="lazy" />
+    </div>
+    <div class="photo-wrap span-6" data-index="5">
+      <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644562/ASP09682_viqqdq.jpg" alt="Story" loading="lazy" />
+    </div>
+  </div>
+
+  <section class="cta-lifestyle">
+    <h2>Tell Your <em>Story</em></h2>
+    <a href="https://wa.me/918754137640" target="_blank" rel="noopener" class="btn-outline">Start a Conversation</a>
+  </section>
+
+  <footer>© 2026 AS Portraits. All rights reserved by <strong><a href="https://share.google/Shxgu4SYuWEArAekm" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Javia Ventures</a></strong>.</footer>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="" class="lb-img" id="lb-img" />
+  </div>
+
+  <script>
+    const nav = document.getElementById('album-nav')
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 80), { passive: true })
+    setTimeout(() => document.getElementById('hero-img').classList.add('loaded'), 100)
+
+    const photos = document.querySelectorAll('.photo-wrap')
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } })
+    }, { threshold: 0.1 })
+    photos.forEach(p => io.observe(p))
+
+    const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img')
+    photos.forEach(w => {
+      w.onclick = () => {
+        lbImg.src = w.querySelector('img').src
+        lb.classList.add('open')
+        document.body.style.overflow = 'hidden'
+      }
+    })
+    lb.onclick = () => {
+      lb.classList.remove('open')
+      document.body.style.overflow = ''
+    }
+  </script>
+</body>
+</html>
