@@ -400,6 +400,37 @@ function initFAB() {
   })
 }
 
+/**
+ * Page Transitions
+ */
+function initPageTransitions() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a')
+    if (!link) return
+
+    const href = link.getAttribute('href')
+    const target = link.getAttribute('target')
+
+    // Handle internal links only
+    if (
+      href && 
+      !href.startsWith('http') && 
+      !href.startsWith('mailto') && 
+      !href.startsWith('tel') && 
+      !href.startsWith('#') &&
+      target !== '_blank'
+    ) {
+      e.preventDefault()
+      document.body.classList.add('page-exit')
+      
+      setTimeout(() => {
+        window.location.href = href
+      }, 400)
+    }
+  })
+}
+
+
 // ============================================================
 // INIT
 // ============================================================
@@ -427,6 +458,7 @@ function init() {
   initContactForm()
   initReveal()
   initFAB()
+  initPageTransitions()
 
   // Animations
   initGSAP()
