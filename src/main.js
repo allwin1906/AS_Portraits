@@ -48,15 +48,15 @@ const stories = [
     tag: 'Corporate Photography',
     desc: 'Professional imagery that builds credibility and brand identity. From headshots to events and product launches — we bring the same cinematic quality to your business.',
     type: 'image',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647525/008A2958_lxuksg.jpg',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777309303/ASP06320_dfomwj.jpg',
     albumUrl: '/AS_Portraits/albums/model-shoots.html'
   },
   {
-    title: 'Baby Shoot',
-    tag: 'Baby & Newborn Photography',
-    desc: 'Pure, innocent, and irreplaceable — tiny fingers, tiny toes, and the overwhelming love of new life. Captured softly, lovingly, and timelessly.',
+    title: 'Maternity',
+    tag: 'Maternity Photography',
+    desc: 'Honouring the profound beauty and strength of your journey into motherhood — radiant, timeless, and deeply personal portraits.',
     type: 'image',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg',
     albumUrl: '/AS_Portraits/albums/newborns-kids.html'
   },
   {
@@ -89,14 +89,14 @@ const captureServices = [
     title: 'Model Shoot',
     icon: '📸',
     desc: 'High-end editorial and cinematic portfolios for models and brands.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647525/008A2958_lxuksg.jpg',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777309303/ASP06320_dfomwj.jpg',
     pageUrl: '/AS_Portraits/albums/model-shoots.html'
   },
   {
-    title: 'Baby Shoot',
-    icon: '🌼',
-    desc: 'Pure and innocent moments of your little ones, lovingly and softly framed.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg',
+    title: 'Maternity',
+    icon: '🤱',
+    desc: 'Radiant and timeless portraits celebrating the beautiful journey into motherhood.',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg',
     pageUrl: '/AS_Portraits/albums/newborns-kids.html'
   },
   {

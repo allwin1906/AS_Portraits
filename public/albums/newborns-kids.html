@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newborns & Kids Photography | AS Portraits</title>
-  <meta name="description" content="Pure, innocent moments of your little ones, lovingly captured by AS Portraits." />
+  <title>Maternity Photography | AS Portraits</title>
+  <meta name="description" content="Beautifully capturing the radiant journey to motherhood. Maternity photography by AS Portraits." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
@@ -40,14 +40,14 @@
 
     /* HERO */
     .hero {
-      position: relative; height: 80svh; min-height: 550px;
+      position: relative; height: 85svh; min-height: 550px;
       overflow: hidden; display: flex; align-items: flex-end;
     }
     .hero-img {
       position: absolute; inset: 0;
-      background-image: url('https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg');
-      background-size: cover; background-position: center 40%;
-      filter: brightness(0.6);
+      background-image: url('https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg');
+      background-size: cover; background-position: center 30%;
+      filter: brightness(0.65);
       transform: scale(1.06); transition: transform 8s ease;
     }
     .hero-img.loaded { transform: scale(1); }
@@ -56,53 +56,48 @@
     .hero-tag { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
     .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
     .hero-title { font-family: var(--serif); font-size: clamp(3.5rem,10vw,8rem); font-style: italic; line-height: 0.9; color: #fff; margin-bottom: 1.5rem; }
-    .hero-sub { font-size: 1rem; color: rgba(245,240,232,0.45); max-width: 50ch; line-height: 1.7; }
+    .hero-sub { font-size: 1.1rem; color: rgba(245,240,232,0.5); font-family: var(--serif); font-style: italic; max-width: 50ch; line-height: 1.6; }
 
-    /* SECTION LABEL */
-    .section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem; }
-    .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(201,169,110,0.2); }
+    /* GALLERY */
+    .gallery-section { padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem); max-width: 1400px; margin: 0 auto; }
+    .section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 3rem; display: flex; align-items: center; gap: 0.8rem; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(201,169,110,0.15); }
 
-    /* GALLERY GRID */
-    .gallery-wrap { padding: clamp(4rem,8vw,8rem) clamp(1.5rem,4vw,3rem); max-width: 1400px; margin: 0 auto; }
-    .layout-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1rem, 2vw, 2rem); }
-    .layout-grid .photo-wrap { aspect-ratio: 4/5; }
-    .layout-grid .photo-wrap.wide { grid-column: span 2; aspect-ratio: 16/9; }
-
-    .photo-wrap {
-      position: relative; overflow: hidden; border-radius: 4px;
-      background: var(--charcoal); cursor: zoom-in;
-      opacity: 0; transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+    .mosaic-layout { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.2rem; }
+    .photo-wrap { 
+      position: relative; overflow: hidden; border-radius: 4px; background: var(--charcoal); cursor: zoom-in;
+      opacity: 0; transform: translateY(20px); transition: all 0.8s ease;
     }
     .photo-wrap.visible { opacity: 1; transform: translateY(0); }
     .photo-wrap img { transition: transform 0.8s ease; filter: brightness(0.9); }
-    .photo-wrap:hover img { transform: scale(1.04); filter: brightness(1); }
+    .photo-wrap:hover img { transform: scale(1.05); filter: brightness(1); }
+
+    .span-3 { grid-column: span 3; aspect-ratio: 4/5; }
+    .span-2 { grid-column: span 2; aspect-ratio: 1; }
+    .span-6 { grid-column: span 6; aspect-ratio: 16/7; }
 
     /* CTA */
-    .cta-section { 
-      padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem);
-      text-align: center; background: var(--charcoal);
-      margin-top: 4rem;
+    .cta-area { 
+      padding: clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 4rem);
+      text-align: center; background: linear-gradient(to bottom, transparent, #0c0b09);
     }
-    .cta-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); font-style: italic; color: #fff; margin-bottom: 1.5rem; }
-    .cta-text { color: rgba(245,240,232,0.5); margin-bottom: 3rem; max-width: 60ch; margin-inline: auto; }
-    .btn-gold { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold); color: var(--black); padding: 1rem 2.5rem; border-radius: 2px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.3s; }
-    .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); }
+    .cta-title { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 4.5rem); font-style: italic; color: #fff; margin-bottom: 2rem; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--gold); color: var(--black); padding: 1.1rem 2.8rem; border-radius: 2px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: all 0.3s; }
+    .btn-gold:hover { background: var(--gold-2); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(201,169,110,0.15); }
 
-    footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.75rem; color: rgba(245,240,232,0.3); }
-    footer a { color: inherit; }
+    footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.75rem; color: rgba(245,240,232,0.3); }
 
     /* LIGHTBOX */
     .lightbox { display: none; position: fixed; inset: 0; z-index: 900; background: rgba(5,5,5,0.98); backdrop-filter: blur(15px); align-items: center; justify-content: center; }
     .lightbox.open { display: flex; }
-    .lightbox-img-wrap { position: relative; max-width: 90vw; max-height: 90vh; }
-    .lightbox-img-wrap img { max-width: 90vw; max-height: 85vh; object-fit: contain; }
-    .lb-close { position: fixed; top: 2rem; right: 2rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; opacity: 0.6; transition: opacity 0.3s; }
+    .lb-close { position: fixed; top: 2rem; right: 2rem; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; opacity: 0.5; transition: 0.3s; }
     .lb-close:hover { opacity: 1; }
+    .lb-img { max-width: 90vw; max-height: 85vh; border-radius: 2px; }
 
     @media (max-width: 768px) {
-      .layout-grid { grid-template-columns: 1fr; }
-      .layout-grid .photo-wrap.wide { grid-column: span 1; }
+      .mosaic-layout { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+      .span-3, .span-2, .span-6 { grid-column: span 2; aspect-ratio: 4/5; }
+      .span-6 { aspect-ratio: 16/9; }
     }
   </style>
 </head>
@@ -120,44 +115,79 @@
     <div class="hero-img" id="hero-img"></div>
     <div class="hero-grad"></div>
     <div class="hero-content">
-      <div class="hero-tag">Newborns & Kids</div>
-      <h1 class="hero-title">Pure <em>Innocence</em></h1>
-      <p class="hero-sub">Capturing the delicate first days and the playful years — stories of childhood that stay with you forever.</p>
+      <div class="hero-tag">Maternity</div>
+      <h1 class="hero-title">Radiant <em>Motherhood</em></h1>
+      <p class="hero-sub">Honouring the profound beauty and strength of your journey into motherhood.</p>
     </div>
   </section>
 
-  <div class="gallery-wrap">
-    <div class="section-label">Aesthetic Captures</div>
-    <div class="layout-grid">
-      <div class="photo-wrap" data-index="0">
-        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg" alt="Newborn" loading="lazy" />
+  <div class="gallery-section">
+    <div class="section-label">Sam &amp; Cath — A New Chapter</div>
+    <div class="mosaic-layout">
+      <div class="photo-wrap span-3" data-index="0">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg" alt="Sam & Cath Maternity" loading="lazy" />
       </div>
-      <div class="photo-wrap" data-index="1">
-        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644542/ASP02540_zx9nqw.jpg" alt="Child portrait" loading="lazy" />
+      <div class="photo-wrap span-3" data-index="1">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305848/ASP03717_o6rkg2.jpg" alt="Sam & Cath Maternity" loading="lazy" />
       </div>
-      <div class="photo-wrap wide" data-index="2">
-        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647617/HSP02747_anwumk.jpg" alt="Playtime" loading="lazy" />
+      <div class="photo-wrap span-2" data-index="2">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305825/ASP03707_ls5wbr.jpg" alt="Sam & Cath Maternity" loading="lazy" />
       </div>
-      <div class="photo-wrap" data-index="3">
-        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg" alt="Details" loading="lazy" />
+      <div class="photo-wrap span-2" data-index="3">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305795/ASP03688_sgbbkx.jpg" alt="Sam & Cath Maternity" loading="lazy" />
       </div>
-      <div class="photo-wrap" data-index="4">
-        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647500/AKZ04343_kpqi0e.jpg" alt="Smile" loading="lazy" />
+      <div class="photo-wrap span-2" data-index="4">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305776/ASP03693_wayzmd.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-6" data-index="5">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305764/ASP03676_cqot2y.jpg" alt="Sam & Cath Maternity — wide" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="6">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305692/ASP03671_ewpw4q.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="7">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305616/ASP03645_w35lig.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-2" data-index="8">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305576/ASP03523_ocyf9a.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-2" data-index="9">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305569/ASP03564_m0vv47.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-2" data-index="10">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305572/ASP03629_vgqbvj.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="11">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305567/ASP03620_dugcv8.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="12">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305551/ASP03561_kccked.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-6" data-index="13">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305519/ASP03597_rvt8qf.jpg" alt="Sam & Cath Maternity — wide" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="14">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305510/ASP03540_srn1oc.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-3" data-index="15">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305452/ASP03531_mwcptl.jpg" alt="Sam & Cath Maternity" loading="lazy" />
+      </div>
+      <div class="photo-wrap span-6" data-index="16">
+        <img src="https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305467/ASP03535_eq1r1c.jpg" alt="Sam & Cath Maternity — final wide" loading="lazy" />
       </div>
     </div>
   </div>
 
-  <section class="cta-section">
-    <h2 class="cta-title">Capture the Magic<br>of Childhood</h2>
-    <p class="cta-text">Book a session to preserve these fleeting, beautiful years with cinematic photography.</p>
-    <a href="https://wa.me/918754137640" target="_blank" rel="noopener" class="btn-gold">Enquire Now</a>
+  <section class="cta-area">
+    <h2 class="cta-title">Cherish the <em>Wait</em></h2>
+    <a href="https://wa.me/918754137640" target="_blank" rel="noopener" class="btn-gold">Enquire for Maternity Session</a>
   </section>
 
-  <footer>© 2026 AS Portraits. All rights reserved by <strong><a href="https://share.google/Shxgu4SYuWEArAekm" target="_blank" rel="noopener">Javia Ventures</a></strong>.</footer>
+  <footer>© 2026 AS Portraits. All rights reserved by <strong><a href="https://share.google/Shxgu4SYuWEArAekm" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Javia Ventures</a></strong>.</footer>
 
   <div class="lightbox" id="lightbox">
     <button class="lb-close" id="lb-close">✕</button>
-    <div class="lightbox-img-wrap"><img src="" alt="" id="lb-img" /></div>
+    <img src="" alt="" class="lb-img" id="lb-img" />
   </div>
 
   <script>
@@ -171,14 +201,13 @@
     }, { threshold: 0.1 })
     photos.forEach(p => io.observe(p))
 
-    // Lightbox
     const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img')
-    photos.forEach((w) => {
-      w.addEventListener('click', () => {
+    photos.forEach(w => {
+      w.onclick = () => {
         lbImg.src = w.querySelector('img').src
         lb.classList.add('open')
         document.body.style.overflow = 'hidden'
-      })
+      }
     })
     document.getElementById('lb-close').onclick = () => {
       lb.classList.remove('open')
