@@ -16,37 +16,37 @@ const stories = [
     tag: 'Wedding Photography',
     desc: 'Sacred rituals, unscripted laughter, and timeless vows — every detail of your wedding day captured with cinematic precision and emotional depth.',
     type: 'image',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg',
-    albumUrl: '/AS_Portraits/albums/akhil-meera.html'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647524/ASP01673_rbnyaq.jpg',
+    albumUrl: '/AS_Portraits/albums/wedding.html'
   },
   {
     title: 'Pre-Wedding',
     tag: 'Pre-Wedding Shoot',
     desc: 'Your love story deserves a prelude. We create dreamy, cinematic pre-wedding shoots that reflect your unique bond — golden hour frames that you\'ll treasure forever.',
     type: 'image',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647617/HSP02747_anwumk.jpg',
-    albumUrl: '/AS_Portraits/albums/arjun-neha.html'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778085908/HSP07543_addrou.jpg',
+    albumUrl: '/AS_Portraits/albums/pre-wedding.html'
   },
   {
     title: 'Engagement',
     tag: 'Engagement Photography',
     desc: 'The beginning of forever. We capture the joy, nerves, and pure happiness of your engagement in a way that tells the story of your love.',
     type: 'image',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644541/ASP02519_tgq8zn.jpg',
-    albumUrl: '/AS_Portraits/albums/arjun-neha.html'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778086188/ASP03772_wqd87v.jpg',
+    albumUrl: '/AS_Portraits/albums/engagement.html'
   },
   {
-    title: 'Birthday',
-    tag: 'Birthday Photography',
-    desc: 'Every birthday is a milestone worth celebrating. From first birthdays to milestone years, we document the joy, cake smashes, and candid family moments.',
-    type: 'video',
-    img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649268/Cutie_pie_on_a_sugar_high_Pratiksha_s_cake_smash_moments_For_Bookings-Contact-_91-95973685_x81blc.mp4',
-    albumUrl: '/AS_Portraits/albums/newborns-kids.html'
+    title: 'Outdoor Shoot',
+    tag: 'Outdoor Shoots',
+    desc: 'Creative conceptual shoots utilizing natural light and beautiful surroundings. We capture authentic moments in stunning outdoor locations.',
+    type: 'image',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778087681/ASP09463_pp8nri.jpg',
+    albumUrl: '/AS_Portraits/albums/outdoor-shoot.html'
   },
   {
-    title: 'Corporate',
-    tag: 'Corporate Photography',
-    desc: 'Professional imagery that builds credibility and brand identity. From headshots to events and product launches — we bring the same cinematic quality to your business.',
+    title: 'Model Photo Shoot',
+    tag: 'Model & Editorial',
+    desc: 'High-end editorial and cinematic portfolios for models and brands. We bring professional styling and cinematic quality to your portfolio.',
     type: 'image',
     img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777309303/ASP06320_dfomwj.jpg',
     albumUrl: '/AS_Portraits/albums/model-shoots.html'
@@ -57,15 +57,23 @@ const stories = [
     desc: 'Honouring the profound beauty and strength of your journey into motherhood — radiant, timeless, and deeply personal portraits.',
     type: 'image',
     img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg',
-    albumUrl: '/AS_Portraits/albums/newborns-kids.html'
+    albumUrl: '/AS_Portraits/albums/maternity.html'
   },
   {
-    title: 'Reels & Video',
-    tag: 'Cinematic Video',
-    desc: 'From wedding highlight films to Instagram reels — our cinematic approach to video storytelling gives your memories motion, music, and emotion.',
+    title: 'Baby Shoot',
+    tag: 'Baby Photography',
+    desc: 'Beautifully capturing the innocence, pure joy, and fleeting milestones of your little ones.',
+    type: 'image',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778092547/ASP02351_kammqj.jpg',
+    albumUrl: '/AS_Portraits/albums/baby-shoot.html'
+  },
+  {
+    title: 'Cinematic Reels',
+    tag: 'Reels',
+    desc: 'Short, impactful video stories tailored to capture the energy and motion of your special moments.',
     type: 'video',
-    img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649276/ANANDH_SAINUJA_Sacred_vows_timeless_love._WeddingPhotography_WeddingPhotographer_Weddin_rdy4fe.mp4',
-    albumUrl: '/AS_Portraits/albums/anandh-sainuja.html'
+    img: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649280/Aadiney_Irupen_pavalamalli_VC_asportraits___Makeup_h_bridal_studio_trichyEdit_mast_lgghee.mp4',
+    albumUrl: '/AS_Portraits/albums/reels.html'
   }
 ]
 
@@ -75,7 +83,7 @@ const captureServices = [
     title: 'Wedding Photography',
     icon: '✦',
     desc: 'Authentic coverage of your most sacred day — rituals, reception, and everything in between.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647333/ASP09961_sq20uf.jpg',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647524/ASP01673_rbnyaq.jpg',
     pageUrl: '/AS_Portraits/albums/wedding.html'
   },
   {
@@ -99,13 +107,7 @@ const captureServices = [
     img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305916/ASP03729_srzzkm.jpg',
     pageUrl: '/AS_Portraits/albums/newborns-kids.html'
   },
-  {
-    title: 'Corporate Shoots',
-    icon: '🏢',
-    desc: 'Professional imagery that builds credibility and strengthens your brand identity.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644542/ASP02540_zx9nqw.jpg',
-    pageUrl: '/AS_Portraits/albums/corporate.html'
-  },
+
   {
     title: 'Lifestyle Photography',
     icon: '✨',
@@ -114,17 +116,11 @@ const captureServices = [
     pageUrl: '/AS_Portraits/albums/lifestyle.html'
   },
   {
-    title: 'Video / Highlights',
-    icon: '🎬',
-    desc: 'Cinematic edits that weave your entire story into one unforgettable film.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg',
-    pageUrl: '/AS_Portraits/albums/video-highlights.html'
-  },
-  {
     title: 'Cinematography',
     icon: '🎥',
-    desc: 'Full cinematic wedding films with professional grade storytelling and production.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647333/ASP09961_sq20uf.jpg',
+    desc: 'Full cinematic films capturing every emotion and moment.',
+    type: 'image',
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778087683/ASP09152_l7iqte.jpg',
     pageUrl: '/AS_Portraits/albums/cinematography.html'
   },
   {
@@ -142,64 +138,46 @@ const whyUsPoints = [
     number: '01',
     title: 'Storytelling, Not Just Photography',
     desc: 'We approach every shoot as a narrative — crafting images that tell your complete emotional story.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644581/ASP02159_lxnbhs.jpg'
   },
   {
     number: '02',
     title: 'Cinematic & Premium Quality',
     desc: 'Every frame is composed and delivered with a cinematic eye and high-end post-processing.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647500/AKZ04343_kpqi0e.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778087685/AS_P0902_gfegrv.jpg'
   },
   {
     number: '03',
     title: 'Emotion First Approach',
     desc: 'We chase feeling over perfection — real tears, real laughter, real love captured authentically.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1777305795/ASP03688_sgbbkx.jpg'
   },
   {
     number: '04',
     title: 'Professional Yet Friendly Team',
     desc: 'We blend seamlessly into your celebration so you remain comfortable and completely yourself.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775644541/ASP02519_tgq8zn.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647626/ASP09682_fuh6kp.jpg'
   },
   {
     number: '05',
     title: 'On-Time Delivery',
     desc: 'We respect your timeline — curated galleries and films delivered punctually, without delays.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647617/HSP02747_anwumk.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647540/HSP06520_m4lfq6.jpg'
   },
   {
     number: '06',
     title: 'Value for Every Budget',
     desc: 'Premium quality doesn\'t require a premium price — tailored packages that fit your needs.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647333/ASP09961_sq20uf.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647539/AKZ04717_crmfcz.jpg'
   },
   {
     number: '07',
     title: 'Attention to Detail',
     desc: 'From light angles to background elements — nothing escapes our eye in pursuit of the perfect frame.',
-    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647525/008A2958_lxuksg.jpg'
+    img: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1778086188/ASP03772_wqd87v.jpg'
   }
 ]
 
-const cinematicReels = [
-  { title: 'Floral Grace',       desc: 'Floral portraits in motion.',             src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649280/Aadiney_Irupen_pavalamalli_VC_asportraits___Makeup_h_bridal_studio_trichyEdit_mast_lgghee.mp4' },
-  { title: 'Vibrant Moves',      desc: 'A celebration of dance and joy.',          src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649272/After_a_Long_Time_Dance_ReelVideography_asportraits___Makeup_h_bridal_studio_trichy_Ed_kwjeew.mp4' },
-  { title: 'Sweet Moments',      desc: 'Pratiksha\'s delightful cake smash.',      src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649268/Cutie_pie_on_a_sugar_high_Pratiksha_s_cake_smash_moments_For_Bookings-Contact-_91-95973685_x81blc.mp4' },
-  { title: 'Bridal Elegance',    desc: 'A radiant journey to forever.',            src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649262/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_wuw3sm.mp4' },
-  { title: 'Sacred Vows',        desc: 'Timeless love, beautifully captured.',     src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649276/ANANDH_SAINUJA_Sacred_vows_timeless_love._WeddingPhotography_WeddingPhotographer_Weddin_rdy4fe.mp4' },
-  { title: 'Beautiful Blessing', desc: 'Grateful for this beautiful blessing.',    src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659696/Feeling_so_grateful_for_this_beautiful_blessing._For_Bookings_-Contact_-_91-9597368543_-_8_fz3qlm.mp4' },
-  { title: 'Beach Love Story',   desc: 'Written by the waves — Gokul & Sneka.',   src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659544/A_love_story_written_by_the_waves._Gokul_Sneka_CouplePhotography_BeachCouple_LoveStory_prew_gkkfjb.mp4' },
-  { title: 'Royal Radiance',     desc: 'The queen of the day, radiant and regal.', src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775659541/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_xejbbp.mp4' }
-]
-
-const featuredWeddings = [
-  { title: 'Siddharth & Ananya — Chennai',     type: 'image', src: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647500/AKZ04343_kpqi0e.jpg' },
-  { title: 'Vikram & Swathi — Coimbatore',      type: 'image', src: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647405/ASP01669_qkkznm.jpg' },
-  { title: 'Queen of the Day — Special Edition',type: 'video', src: 'https://res.cloudinary.com/duvkbm8jv/video/upload/q_auto/f_auto/v1775649262/Here_comes_the_queen_of_the_day_radiant_graceful_and_ready_for_forever._WeddingPhotography_wuw3sm.mp4' },
-  { title: 'Surya & Kavya — Kerala',            type: 'image', src: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647617/HSP02747_anwumk.jpg' },
-  { title: 'Akhil & Meera — Trichy',            type: 'image', src: 'https://res.cloudinary.com/duvkbm8jv/image/upload/q_auto/f_auto/v1775647548/AKZ04700_d6ny6b.jpg' }
-]
 
 const testimonials = [
   {
@@ -258,19 +236,18 @@ function buildServices() {
   const grid = document.getElementById('services-grid')
   if (!grid) return
   captureServices.forEach((c, i) => {
-    const tag = c.pageUrl ? 'a' : 'div'
-    const hrefAttr = c.pageUrl ? `href="${c.pageUrl}"` : ''
+    const mediaHTML = c.type === 'video'
+      ? `<video src="${c.img}" autoplay muted loop playsinline class="card-bg" style="object-fit:cover;"></video>`
+      : `<div class="card-bg" style="background-image:url('${c.img}');"></div>`
+    
     grid.innerHTML += `
-      <${tag} ${hrefAttr} class="service-card reveal" style="transition-delay:${i * 0.07}s; cursor:${c.pageUrl ? 'pointer' : 'default'}; text-decoration:none;">
-        <div class="card-bg" style="background-image:url('${c.img}');"></div>
+      <div class="service-card reveal" style="transition-delay:${i * 0.07}s;">
+        ${mediaHTML}
         <div class="card-overlay"></div>
         <div class="card-body">
-          <div class="card-icon">${c.icon}</div>
           <h3>${c.title}</h3>
-          <p class="card-desc">${c.desc}</p>
-          ${c.pageUrl ? '<span class="card-link-hint">View Gallery →</span>' : ''}
         </div>
-      </${tag}>
+      </div>
     `
   })
 }
@@ -293,39 +270,7 @@ function buildWhyUs() {
   })
 }
 
-function buildReels() {
-  const grid = document.getElementById('reels-grid')
-  if (!grid) return
-  cinematicReels.forEach((r, i) => {
-    grid.innerHTML += `
-      <div class="reel-card reveal" style="transition-delay:${(i % 4) * 0.08}s">
-        <video src="${r.src}" autoplay muted loop playsinline></video>
-        <div class="reel-overlay"></div>
-        <div class="reel-info">
-          <h3>${r.title}</h3>
-          <p>${r.desc}</p>
-        </div>
-      </div>
-    `
-  })
-}
 
-function buildFeatured() {
-  const track = document.getElementById('featured-track')
-  if (!track) return
-  featuredWeddings.forEach(f => {
-    const mediaHTML = f.type === 'video'
-      ? `<video src="${f.src}" autoplay muted loop playsinline></video>`
-      : `<div class="media-fill" style="background-image:url('${f.src}');"></div>`
-
-    track.innerHTML += `
-      <div class="featured-item">
-        ${mediaHTML}
-        <div class="featured-caption">${f.title}</div>
-      </div>
-    `
-  })
-}
 
 function buildTestimonials() {
   const wrap = document.getElementById('testimonials-wrap')
@@ -508,27 +453,7 @@ function initGSAP() {
     )
   })
 
-  // Horizontal scroll for featured on desktop only
-  if (window.innerWidth > 768) {
-    const track = document.getElementById('featured-track')
-    const wrap  = document.getElementById('featured-scroll')
-    if (track && wrap) {
-      const totalScroll = track.scrollWidth - window.innerWidth
-      gsap.to(track, {
-        x: -totalScroll,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#featured',
-          start: 'top top',
-          end: () => `+=${totalScroll}`,
-          scrub: 1,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true
-        }
-      })
-    }
-  }
+
 }
 
 // ============================================================
@@ -583,6 +508,16 @@ function initFAB() {
  * Page Transitions
  */
 function initPageTransitions() {
+  // Fix blank page on back/forward navigation (bfcache restore).
+  // When the browser restores a page from cache, the body may still
+  // have the page-exit class (opacity: 0) from when the user left.
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted || performance.getEntriesByType('navigation')[0]?.type === 'back_forward') {
+      document.body.classList.remove('page-exit')
+      document.body.style.opacity = ''
+    }
+  })
+
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a')
     if (!link) return
@@ -627,8 +562,6 @@ function init() {
   buildStories()
   buildServices()
   buildWhyUs()
-  buildReels()
-  buildFeatured()
   buildTestimonials()
 
   // Interactions
